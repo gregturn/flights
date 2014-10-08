@@ -1,8 +1,9 @@
 buildscript {
     ext {
-        springBootVersion = '1.1.7.RELEASE'
+        springBootVersion = '1.2.0.BUILD-SNAPSHOT'
     }
     repositories {
+        mavenLocal()
         mavenCentral()
     }
     dependencies {
@@ -23,6 +24,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
@@ -32,6 +34,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
     compile("org.springframework.boot:spring-boot-starter-data-rest")
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
     compile("com.h2database:h2")
     compile("org.springframework.security.oauth:spring-security-oauth2:2.0.3.RELEASE")
     testCompile("org.springframework.boot:spring-boot-starter-test")
